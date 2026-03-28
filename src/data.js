@@ -5,7 +5,7 @@ export const data = {
     tags: ["System Architecture", "High-Traffic", "MSA", "AWS", "Modernization"],
   },
   about: {
-    philosophy: "결제는 단 한 번의 장애도 용납되지 않는 도메인입니다. 12년간 수천만 명이 매일 사용하는 Samsung Pay의 결제·리워드·로열티 시스템을 설계하고 운영하며, 대용량 트래픽 속에서도 무너지지 않는 백엔드 아키텍처를 만드는 법을 체득했습니다.",
+    philosophy: "결제는 단 한 번의 장애도 용납되지 않는 도메인입니다. 12년간 대규모 글로벌 서비스인 Samsung Pay의 결제·리워드·로열티 시스템을 설계하고 운영하며, 대용량 트래픽 속에서도 무너지지 않는 백엔드 아키텍처를 만드는 법을 체득했습니다.",
     summary: "레거시를 MSA로 전환하고, 인프라를 클라우드로 이전하며, 서비스 내 기능을 단독 기능으로 런칭하고, 팀의 개발 생산성을 끌어올리는 것 — 코드를 넘어 시스템 전체를 설계하는 엔지니어입니다."
   },
   techStack: {
@@ -32,7 +32,7 @@ export const data = {
   projects: [
     {
       period: "2023년 ~ 현재",
-      name: "Samsung Pay 한국 결제 관련 서비스 개발 리딩",
+      name: "Samsung Pay 한국 결제 및 부가서비스 개발 리딩",
       role: "결제 기능 개발 리드 및 아키텍처 설계",
       techStack: ["Java", "Spring Framework", "Kafka", "Spring Kafka", "Redis", "MySQL", "Spring Batch"],
       details: [
@@ -46,24 +46,33 @@ export const data = {
     },
     {
       period: "2021년 ~ 2022년",
-      name: "Samsung Pay 통계 시스템 통합 및 Samsung Pass 인프라 이전",
-      role: "프로젝트 리딩 및 데이터 파이프라인 설계",
+      name: "Samsung Pay 통계 시스템 통합 및 Samsung Pass 아키텍처 전환 프로젝트 참여",
+      role: "시스템 통합 및 스펙 일원화 주도, Microservice 전환 참여",
       techStack: ["GCP", "Bigquery", "Airflow", "AWS EMR", "Hudi", "Spark", "Sqoop", "Java", "Spring Boot"],
       details: [
         "기존 권역별로 분리 운영되던 통계 시스템 통합(이종 통계 시스템 간 스펙 일원화)",
         "GCP 기반 데이터 파이프라인 설계 (Airflow 배치 워크플로우 분석, Bigquery 연계 지원)",
-        "삼성패스 핵심 인프라를 Private Cloud에서 AWS 기반으로 완전 전환",
         "삼성패스 공용 기능 라이브러리 화 및 Monolith 아키텍처를 Microservice로 분리 개발 주도"
       ]
     },
     {
       period: "2020년",
-      name: "Samsung Pay 한국 단기대출 및 온라인 결제 개선",
-      role: "카드/PG사 연동 개발 및 CI/CD 구축",
-      techStack: ["Java", "Spring Framework", "Kafka", "Redis", "MySQL", "Spring Batch", "Circle CI", "Spock Framework", "Zeplin", "Athena"],
+      name: "CI/CD 파이프라인 구축을 통한 Code Quality 향상 기여",
+      role: "CI/CD 파이프라인 구축 및 전파",
+      techStack: ["Circle CI", "Spock Framework"],
       details: [
-        "카드사 단기대출 서비스 연동 및 PG사 웹 결제 프로세스 고도화 개발",
-        "수동 배포 및 검증 사이클을 벗어나기 위한 Circle CI 기반 통합 CI/CD 파이프라인 구축"
+        "수동 배포 및 기본 검증 자동화를 위한 Circle CI 기반 통합 CI/CD 파이프라인 구축",
+        "CI/CD 파이프라인 내 Code Quality 측정 자동화 구축"
+      ]
+    },
+    {
+      period: "2020년",
+      name: "Samsung Pay 한국 단기대출 기능 개발 및 온라인 결제 개선",
+      role: "카드/PG사 연동 개발 및 CI/CD 구축",
+      techStack: ["Java", "Spring Framework", "Kafka", "Redis", "MySQL", "Spring Batch"],
+      details: [
+        "카드사 단기대출 서비스 연동",
+        "PG사 웹 결제 프로세스 기능 개선"
       ]
     },
     {
@@ -73,7 +82,7 @@ export const data = {
       techStack: ["Java", "Spring Framework", "Kafka", "Spring Kafka", "MySQL", "Spring Batch", "AWS EC2"],
       details: [
         "삼성페이 내 종속되던 대형 리워즈 시스템을 완전 분리 전담",
-        "신규 핵심 사용자 관리 기능 및 사용자 기반 전체 데이터 마이그레이션 무중단 전략 설계 적용"
+        "신규 핵심 사용자 관리 기능 및 사용자 기반 전체 데이터 마이그레이션 전략 설계 적용"
       ]
     },
     {
@@ -82,28 +91,29 @@ export const data = {
       role: "실시간 결제 포인트 트랜잭션 구축",
       techStack: ["Java", "Spring Framework", "Kafka", "MySQL", "Spring Batch", "AWS EC2"],
       details: [
-        "포인트 실시간 적립, 차감 및 권한 거래 트랜잭션 파트 리딩 구축",
+        "포인트 실시간 적립, 차감 및 권한 거래 트랜잭션 기능 설계 및 개발",
+        "타사 포인트 전환 기능 설계 및 개발",
         "Spring Batch를 활용한 정기 자동 처리(만료, 사용자 등급 갱신, 타사 포인트 전환) 데이터 엔진 확보"
       ]
     },
     {
       period: "2016년 ~ 2017년",
       name: "Samsung Pay Global Loyalty 시스템 개발",
-      role: "사용자 로열티 속성 제어 플랫폼 서버 개발",
+      role: "사용자 로열티 플랫폼 서버 개발",
       techStack: ["Java", "Spring Framework", "Couchbase", "Kafka", "MySQL", "Hibernate Validator", "AWS EC2"],
       details: [
-        "분산형 문서 지향 DB인 Couchbase 기반 글로벌 실시간 사용자 속성 조회 파이프라인 설계",
-        "사용자별 로열티 프로그램 등록 해지 라이프사이클 분산 제어 기능 구현"
+        "국가별 로열티 프로그램 목록 및 속성 관리 기능 개발",
+        "사용자별 로열티 프로그램 등록 해지 라이프사이클 기능 구현"
       ]
     },
     {
       period: "2015년 ~ 2016년",
-      name: "Samsung Pay Korea 대외계 서버 시스템 최적화",
-      role: "카드 연동망 통신 모듈 구축 업무",
+      name: "Samsung Pay Korea 대외계 서버 시스템 개발 및 운영",
+      role: "카드 연동망 통신 모듈 개발 및 운영",
       techStack: ["Java", "Netty", "TCP Socket"],
       details: [
-        "대외 인증 카드결제 시스템의 병목 현상을 방지하기 위해 Netty 고성능 비동기 네트워킹 구조 도입",
-        "국내 주요 카드사 간의 결제망 TCP 연결 유지 및 트랜잭션 라우팅 로직 전담"
+        "Netty기반 통신 모듈 서버 개발 및 파트너 확산 적용",
+        "국내 주요 카드사 간의 결제망 TCP 연결 유지 및 트랜잭션 라우팅 로직 개발 및 운영"
       ]
     },
     {
@@ -123,21 +133,21 @@ export const data = {
       title: "Kafka Consumer 처리량 개선 및 Lag 해소",
       problem: "Samsung Pay Rewards 결제 처리 시 Peak 트래픽 타이밍에 Consumer가 처리 속도를 따라가지 못해 심각한 Kafka Lag 발생.",
       solution: "단순 Partition 확장만으로는 비용 및 트래픽 증가 속도를 극복할 수 없다고 판단, Consumer batch 및 비동기 처리 로직을 적용하여 동시 I/O 능력을 획기적으로 개선.",
-      result: "Kafka Lag 최대 10만 건에서 10건 이하로 감소(99.99% 감소), 사용자 VOC Zero 화, Consumer 처리량 10배 향상"
+      result: "최대 수만건 규모의 Kafka Lag -> 건수 기준 99% 이상 감소, 사용자 VOC Zero 화, Consumer 처리량 10배 향상"
     },
     {
       id: "code-quality",
       title: "Code Quality 개선 및 배포 자동화 체계 주도",
       problem: "개발-테스트-배포의 전 과정이 개발자의 수동 작업(Postman 등)에 집중되어 누락 케이스가 생기며 배포 후 롤백 및 긴급 패치가 빈번하게 발생됨.",
       solution: "CI/CD 파이프라인 구축(Code Merge, Build, Test 자동화 및 Test Score 측정 자동화), 검증 환경 배포 자동화 툴 스크립트 작성 및 팀내 도입 안착.",
-      result: "개발 테스트 생산성 증대, 서비스 전체 배포 안정성 증가(롤백 및 긴급 패치 발생 횟수 분기 평균 4회 -> 1회로 감소), 부서 내 전 프로젝트의 Code Test Coverage 80% 이상 확보."
+      result: "개발 테스트 생산성 증대, 서비스 전체 배포 안정성 증가(롤백 및 긴급 패치 발생 횟수 분기 평균 75% 감소), 부서 내 전 프로젝트의 Code Test Coverage 80% 이상 확보."
     },
     {
       id: "airflow-mwaa",
       title: "Airflow 인프라 전환 작업 리딩 (Onpremise -> AWS MWAA)",
       problem: "기존 Onpremise 환경 노후화 및 담당자 부재로 인한 문서화 미비. 주요 배치 인프라의 장애 리스크 대응이 어려운 상황.",
       solution: "안정성 확보를 위해 관리형 서비스인 AWS MWAA 전환 기획. 기존 DAG / 설정 환경의 깊이있는 정적 분석 진행 후 MWAA 환경에 맞게 마이그레이션.",
-      result: "배치 서버 리소스 운영 리스크 완벽 감소, 재구축 과정 중 상세한 문서화를 통해 운영 인수인계 및 히스토리 레퍼런스 확보를 통해 신규 인력 온보딩 기간 2개월에서 2주로 단축. 기존 onPremise 서버 2대 운영 -> MWAA 전환으로 서버 직접 관리 0대로 감소."
+      result: "배치 서버 리소스 운영 리스크 완벽 감소, 재구축 과정 중 상세한 문서화를 통해 운영 인수인계 및 히스토리 레퍼런스 확보를 통해 신규 인력 온보딩 기간 2개월에서 2주로 단축. 기존 onPremise 환경 -> MWAA 전환으로 직접 관리 서버 0대로 감소."
     },
     {
       id: "admin-portal",
