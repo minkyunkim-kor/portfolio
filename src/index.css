@@ -320,3 +320,53 @@ footer {
   color: var(--text-muted);
   border-top: 1px solid var(--bg-color-lighter);
 }
+
+/* Print Layout Fixes */
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .hero {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  /* Flex/Grid layout bug fixes for Chrome Print Engine */
+  .tech-grid,
+  .projects-grid,
+  .trouble-grid {
+    display: block;
+  }
+
+  /* Explicitly prevent page breaks inside cards */
+  .tech-category,
+  .project-card,
+  .trouble-card {
+    margin-bottom: 2rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .timeline-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .section-title h2,
+  .section-title {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  footer {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-top: 2rem;
+  }
+}
