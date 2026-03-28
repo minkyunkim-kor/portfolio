@@ -108,11 +108,11 @@ export const data = {
     },
     {
       period: "2014년 ~ 2015년",
-      name: "Samsung Chat ON 메신저 서버 코어 개발",
-      role: "핵심 메시지 라우터 서버 담당",
+      name: "Samsung Chat ON 메신저 채팅 목록 및 채팅 방 관리 서버 개발",
+      role: "채팅 목록 및 채팅 방 관리 서버 담당",
       techStack: ["Java", "Spring Framework", "MySQL", "Cassandra"],
       details: [
-        "Cassandra를 데이터 저장소로 활용, 초당 수천 명에게 메시지가 유실되지 않고 발송되는 구조 설계/운영",
+        "Cassandra를 데이터 저장소로 활용, 사용자의 채팅 방 목록 및 채팅 방 정보를 관리하는 서버 개발",
         "멀티 디바이스 환경을 고려한 채팅방 및 히스토리 정합성 관리 모듈 개발"
       ]
     }
