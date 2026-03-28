@@ -46,13 +46,22 @@ export const data = {
     },
     {
       period: "2021년 ~ 2022년",
-      name: "Samsung Pay 통계 시스템 통합 및 Samsung Pass 아키텍처 전환 프로젝트 참여",
-      role: "시스템 통합 및 스펙 일원화 주도, Microservice 전환 참여",
-      techStack: ["GCP", "Bigquery", "Airflow", "AWS EMR", "Hudi", "Spark", "Sqoop", "Java", "Spring Boot"],
+      name: "Samsung Pass 아키텍처 전환 프로젝트 참여",
+      role: "Microservice 전환 참여",
+      techStack: ["Java", "Spring Boot"],
+      details: [
+        "삼성패스 Microservice 전환 개발 참여",
+        "기존 공용 라이브러리 화 되어 있던 기능들을 Microservice로 분리 개발"
+      ]
+    },
+    {
+      period: "2021년 ~ 2022년",
+      name: "Samsung Pay 통계 시스템 통합",
+      role: "시스템 통합 및 스펙 일원화 주도",
+      techStack: ["GCP", "Bigquery", "Airflow", "AWS EMR", "Hudi", "Spark", "Sqoop"],
       details: [
         "기존 권역별로 분리 운영되던 통계 시스템 통합(이종 통계 시스템 간 스펙 일원화)",
-        "GCP 기반 데이터 파이프라인 설계 (Airflow 배치 워크플로우 분석, Bigquery 연계 지원)",
-        "삼성패스 공용 기능 라이브러리 화 및 Monolith 아키텍처를 Microservice로 분리 개발 주도"
+        "GCP 기반 데이터 파이프라인 설계 (Airflow 배치 워크플로우 분석, Bigquery 연계 지원)"
       ]
     },
     {
@@ -67,12 +76,12 @@ export const data = {
     },
     {
       period: "2020년",
-      name: "Samsung Pay 한국 단기대출 기능 개발 및 온라인 결제 개선",
-      role: "카드/PG사 연동 개발 및 CI/CD 구축",
+      name: "Samsung Pay 한국 서버 개발",
+      role: "카드 단기대출 서비스 개발 및 PG사 연동 온라인 결제 기능 개선 설계",
       techStack: ["Java", "Spring Framework", "Kafka", "Redis", "MySQL", "Spring Batch"],
       details: [
-        "카드사 단기대출 서비스 연동",
-        "PG사 웹 결제 프로세스 기능 개선"
+        "카드사 단기대출 API 연동을 통하여 카드의 부가기능으로 단기대출 서비스 제공",
+        "PG사 웹 결제 프로세스 기능 개선 설계 주도"
       ]
     },
     {
