@@ -3,11 +3,9 @@ export const data = {
     greeting: "The Architect",
     headline: "대규모 트래픽을 견디는 확장 가능한 백엔드 시스템을 설계합니다.",
     tags: ["System Architecture", "High-Traffic", "MSA", "AWS", "Modernization"],
-    github: "https://github.com/",
-    linkedin: "https://linkedin.com/"
   },
   about: {
-    philosophy: "코드의 가독성과 시스템의 안정성을 최우선으로 생각하며, 비즈니스 가치를 극대화하는 견고한 백엔드 아키텍처를 설계합니다.",
+    philosophy: "시스템의 안정성을 최우선으로 생각하며, 비즈니스 가치를 극대화하며 대용량 트래픽에도 견고한 백엔드 아키텍처를 설계합니다.",
     summary: "12년간 삼성전자에서 대규모 글로벌 서비스(Samsung Pay, Chat ON 등)의 백엔드 시스템을 개발 및 운영하며, 아키텍처 설계, 대용량 트래픽 처리, 시스템 통합 및 인프라 전환 프로젝트를 성공적으로 이끌어왔습니다."
   },
   techStack: {
@@ -38,8 +36,12 @@ export const data = {
       role: "결제 기능 개발 리드 및 아키텍처 설계",
       techStack: ["Java", "Spring Framework", "Kafka", "Spring Kafka", "Redis", "MySQL", "Spring Batch"],
       details: [
+        "6인 모듈 개발팀 리딩",
+        "기능 별 중요도에 따른 WRITE/READ DB 분리 및 캐시 전략 의사결정 주도",
         "삼성페이 한국 결제/신규 서비스 주요 기능 설계 및 검토",
-        "마이크로서비스 아키텍처를 적용하여 대규모 트랜잭션에도 안정적인 결제 시스템 구축"
+        "마이크로서비스 아키텍처를 적용하여 대규모 트랜잭션에도 안정적인 결제 시스템 구축",
+        "Legacy 시스템의 기술 부채 해결을 위한 리팩토링 및 아키텍처 개선 주도(기능 별 Microservice 분리 설계 및 프로젝트 리딩)",
+        "사용자 VOC 해결 자동화 프로젝트 설계 및 개발"
       ]
     },
     {
@@ -120,15 +122,15 @@ export const data = {
       id: "kafka-lag",
       title: "Kafka Consumer 처리량 개선 및 Lag 해소",
       problem: "Samsung Pay Rewards 결제 처리 시 Peak 트래픽 타이밍에 Consumer가 처리 속도를 따라가지 못해 심각한 Kafka Lag 발생.",
-      solution: "단순 Partition 확장만으로는 비용 및 트래픽 증가 속도를 극복할 수 없다고 판단, Consumer batch 처리 로직을 적용하여 동시 I/O 능력을 획기적으로 개선.",
-      result: "Lag 현상을 완전히 해소하고 최적 비용으로 안정적인 리워드 및 포인트 서비스 운영 확보."
+      solution: "단순 Partition 확장만으로는 비용 및 트래픽 증가 속도를 극복할 수 없다고 판단, Consumer batch 및 비동기 처리 로직을 적용하여 동시 I/O 능력을 획기적으로 개선.",
+      result: "Kafka Lag 최대 10만 건에서 10건 이하로 감소(99.99% 감소), 사용자 VOC Zero 화, Consumer 처리량 10배 향상"
     },
     {
       id: "code-quality",
       title: "Code Quality 개선 및 배포 자동화 체계 주도",
       problem: "개발-테스트-배포의 전 과정이 개발자의 수동 작업(Postman 등)에 집중되어 누락 케이스가 생기며 배포 후 롤백 및 긴급 패치가 빈번하게 발생됨.",
-      solution: "CI/CD 파이프라인 구축(Code Merge, Build, Test 자동화), 검증 환경 배포 자동화 툴 스크립트 작성 및 팀내 도입 안착.",
-      result: "배포 후 롤백 및 긴급 패치 발생 빈도 획기적 감소, 개발 테스트 생산성 증대, 서비스 전체 배포 안정성 초과 달성."
+      solution: "CI/CD 파이프라인 구축(Code Merge, Build, Test 자동화 및 Test Score 측정 자동화), 검증 환경 배포 자동화 툴 스크립트 작성 및 팀내 도입 안착.",
+      result: "배포 후 롤백 및 긴급 패치 발생 빈도 획기적 감소, 개발 테스트 생산성 증대, 서비스 전체 배포 안정성 초과 달성. 부서 내 전 프로젝트의 Code Test Coverage 80% 이상 확보."
     },
     {
       id: "airflow-mwaa",
@@ -142,14 +144,14 @@ export const data = {
       title: "서비스 운영을 위한 어드민 포탈 개발 누락 관련 개선",
       problem: "팀 전원이 Backend만 구성되어 UI/어드민 기능 개발이 지연되었으며, 기존 기술 스택 노후화로 유지보수 난이도가 극심함.",
       solution: "백엔드 엔지니어에게는 Internal API 제공 역할로 집중. AI Vibe coding(AI 보조 코딩 툴)을 활용하여 적은 공수만으로 신규 어드민 포탈 레이아웃과 데이터 연동부를 구현.",
-      result: "효율성 극대화 및 프론트엔드 부담감 해소. 새로운 뷰어와 제어 기능을 확보하여 프로덕션 운영 안정성에 큰 기여."
+      result: "효율성 극대화 및 프론트엔드 부담감 해소. 새로운 뷰어와 제어 기능을 확보하여 프로덕션 운영 안정성에 큰 기여. 적용 전 어드민 개발 준비 및 배포 시간 3개월에서 1개월 이내로 단축(66% 감소)"
     },
     {
       id: "api-spec",
       title: "API Specification 관리 효율화 파이프라인 도입",
       problem: "오랜 운영 서버의 낡은 워드 포맷 API 명세서 혼재, 개발과 문서 수정의 동기화 어려움, 점진적인 API 확대로 관리 리소스 과부하 상황.",
       solution: "OpenAPI Spec을 도입해 코드와 명세를 동기화/산출되도록 정책 수립. 문서 통합을 위해 Docusaurus 포탈 구축 + GitHub Pages 배포 자동화를 수립, 레거시 워드 문서는 AI를 통해 OpenAPI 규격으로 변환 편입 설계.",
-      result: "API Spec의 변경사항 추적 투명화. QA, 외부 제휴사 등 유관 부서와의 협업 속도 급증 및 커뮤니케이션 오버헤드 완벽 차단."
+      result: "API Spec의 변경사항 추적 투명화. QA, 외부 제휴사 등 유관 부서와의 협업 속도 급증 및 커뮤니케이션 오버헤드 완벽 차단. 개발자 API 문서 작성 시간 50% 감소."
     }
   ]
 };
