@@ -9,13 +9,14 @@ export const data = {
     summary: "레거시를 MSA로 전환하고, 인프라를 클라우드로 이전하며, 서비스 내 기능을 단독 기능으로 런칭하고, 팀의 개발 생산성을 끌어올리는 것 — 코드를 넘어 시스템 전체를 설계하는 엔지니어입니다."
   },
   techStack: {
-    languages: ["Java", "Python", "JavaScript/Node.js"],
+    languages: ["Java", "Python"],
     frameworks: ["Spring Framework", "Spring Boot", "Spring Batch", "Spring Kafka"],
-    databases: ["MySQL", "PostgreSQL", "Cassandra", "Couchbase", "Redis"],
+    databases: ["MySQL", "Cassandra", "Couchbase", "Redis"],
     infrastructure: ["AWS EC2", "AWS EMR", "AWS MWAA", "GCP", "Kubernetes", "Docker"],
     messaging: ["Kafka", "Netty", "TCP Socket"],
     dataEngineering: ["Airflow", "Bigquery", "Spark", "Sqoop", "Hudi"],
-    tools: ["Circle CI", "Github Actions", "Spock Framework", "Zeplin", "Athena", "Hibernate Validator"]
+    tests: ["Spock Framework", "JUnit", "Mockito"],
+    tools: ["Circle CI", "Github Actions", "Zeplin", "Athena"]
   },
   experience: [
     {
