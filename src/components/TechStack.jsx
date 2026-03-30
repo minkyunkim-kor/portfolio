@@ -3,7 +3,7 @@ import { data } from '../data';
 
 const TechStack = () => {
   const { techStack } = data;
-  
+
   const renderCategory = (title, items) => (
     <div className="tech-category card">
       <h3 className="tech-category-title">{title}</h3>
@@ -25,6 +25,7 @@ const TechStack = () => {
         {renderCategory("Data Engineering", techStack.dataEngineering)}
         {renderCategory("Infrastructure", techStack.infrastructure)}
         {renderCategory("Messaging & Server", techStack.messaging)}
+        {renderCategory("Tests", techStack.tests)}
         {renderCategory("Tools", techStack.tools)}
       </div>
     </section>
