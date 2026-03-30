@@ -114,26 +114,6 @@ export const data = {
         "국가별 로열티 프로그램 목록 및 속성 관리 기능 개발",
         "사용자별 로열티 프로그램 등록 해지 라이프사이클 기능 구현"
       ]
-    },
-    {
-      period: "2015년 ~ 2016년",
-      name: "Samsung Pay Korea 대외계 서버 시스템 개발 및 운영",
-      role: "카드 연동망 통신 모듈 개발 및 운영",
-      techStack: ["Java", "Netty", "TCP Socket"],
-      details: [
-        "Netty기반 통신 모듈 서버 개발 및 파트너 확산 적용",
-        "국내 주요 카드사 간의 결제망 TCP 연결 유지 및 트랜잭션 라우팅 로직 개발 및 운영"
-      ]
-    },
-    {
-      period: "2014년 ~ 2015년",
-      name: "Samsung Chat ON 메신저 채팅 목록 및 채팅 방 관리 서버 개발",
-      role: "채팅 목록 및 채팅 방 관리 서버 담당",
-      techStack: ["Java", "Spring Framework", "MySQL", "Cassandra"],
-      details: [
-        "Cassandra를 데이터 저장소로 활용, 사용자의 채팅 방 목록 및 채팅 방 정보를 관리하는 서버 개발",
-        "멀티 디바이스 환경을 고려한 채팅방 및 히스토리 정합성 관리 모듈 개발"
-      ]
     }
   ],
   troubleshooting: [
